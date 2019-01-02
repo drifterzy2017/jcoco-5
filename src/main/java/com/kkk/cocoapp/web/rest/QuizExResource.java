@@ -4,7 +4,7 @@ import com.codahale.metrics.annotation.Timed;
 import com.kkk.cocoapp.domain.Quiz;
 import com.kkk.cocoapp.service.QuizService;
 import com.kkk.cocoapp.service.dto.CoinStat;
-import com.kkk.cocoapp.service.quiz.QuizFacadeService;
+import com.kkk.cocoapp.service.quiz.MyAppFacadeService;
 import com.kkk.cocoapp.web.rest.errors.BadRequestAlertException;
 import io.github.jhipster.web.util.ResponseUtil;
 import lombok.val;
@@ -25,10 +25,10 @@ public class QuizExResource {
 
     private final Logger log = LoggerFactory.getLogger(QuizExResource.class);
     private static final String ENTITY_NAME = "quiz";
-    private final QuizFacadeService quizFacade;
+    private final MyAppFacadeService quizFacade;
     private final QuizService quizService;
 
-    public QuizExResource(QuizFacadeService quizExService, QuizService quizService) {
+    public QuizExResource(MyAppFacadeService quizExService, QuizService quizService) {
         this.quizFacade = quizExService;
         this.quizService = quizService;
     }

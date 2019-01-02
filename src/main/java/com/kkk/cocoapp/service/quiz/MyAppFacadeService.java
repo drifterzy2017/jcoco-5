@@ -25,7 +25,7 @@ import java.util.Map;
  */
 @Service
 @Transactional
-public class QuizFacadeService {
+public class MyAppFacadeService {
      final ApplicationProperties AppParameter;
 
     private final QuizRepository quizRepository;
@@ -39,7 +39,7 @@ public class QuizFacadeService {
 
     private final QuizFact quizFact;
 
-    public QuizFacadeService(ApplicationProperties appParameter, QuizRepository quizRepository, BillRepository billRepository, LibQuestionRepository libQuestionRepository, Map<String, QuizFact> myQuizFacts) {
+    public MyAppFacadeService(ApplicationProperties appParameter, QuizRepository quizRepository, BillRepository billRepository, LibQuestionRepository libQuestionRepository, Map<String, QuizFact> myQuizFacts) {
         this.AppParameter = appParameter;
         this.quizRepository = quizRepository;
         this.billRepository = billRepository;
