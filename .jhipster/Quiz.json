@@ -1,0 +1,90 @@
+{
+    "name": "Quiz",
+    "fields": [
+        {
+            "fieldName": "testKey",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "testName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "libName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "isAutoSubmit",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "myRound",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "startTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "successTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "topmostSeconds",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "costSeconds",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "mark",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "passCount",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "failCount",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "centCount",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "point",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "used",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "useTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "useNote",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "question",
+            "otherEntityName": "question",
+            "otherEntityRelationshipName": "quiz"
+        }
+    ],
+    "changelogDate": "20181228064603",
+    "entityTableName": "quiz",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

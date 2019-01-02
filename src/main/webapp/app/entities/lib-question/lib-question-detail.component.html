@@ -1,0 +1,55 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="libQuestion">
+            <h2><span jhiTranslate="jcoco5App.libQuestion.detail.title">Lib Question</span> {{libQuestion.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jcoco5App.libQuestion.libName">Lib Name</span></dt>
+                <dd>
+                    <span>{{libQuestion.libName}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.libQuestion.ask">Ask</span></dt>
+                <dd>
+                    <span>{{libQuestion.ask}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.libQuestion.answer">Answer</span></dt>
+                <dd>
+                    <span>{{libQuestion.answer}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.libQuestion.countPass">Count Pass</span></dt>
+                <dd>
+                    <span>{{libQuestion.countPass}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.libQuestion.countFail">Count Fail</span></dt>
+                <dd>
+                    <span>{{libQuestion.countFail}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.libQuestion.countRate">Count Rate</span></dt>
+                <dd>
+                    <span>{{libQuestion.countRate}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.libQuestion.countPassAgain">Count Pass Again</span></dt>
+                <dd>
+                    <span>{{libQuestion.countPassAgain}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.libQuestion.isPass">Is Pass</span></dt>
+                <dd>
+                    <span>{{libQuestion.isPass}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/lib-question', libQuestion.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,115 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-quiz-heading" jhiTranslate="jcoco5App.quiz.home.createOrEditLabel">Create or edit a Quiz</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!quiz.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="quiz.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.quiz.testKey" for="field_testKey">Test Key</label>
+                    <input type="text" class="form-control" name="testKey" id="field_testKey"
+                        [(ngModel)]="quiz.testKey" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.quiz.testName" for="field_testName">Test Name</label>
+                    <input type="text" class="form-control" name="testName" id="field_testName"
+                        [(ngModel)]="quiz.testName" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.quiz.libName" for="field_libName">Lib Name</label>
+                    <input type="text" class="form-control" name="libName" id="field_libName"
+                        [(ngModel)]="quiz.libName" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.quiz.isAutoSubmit" for="field_isAutoSubmit">Is Auto Submit</label>
+                    <input type="checkbox" class="form-control" name="isAutoSubmit" id="field_isAutoSubmit"
+                        [(ngModel)]="quiz.isAutoSubmit" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.quiz.myRound" for="field_myRound">My Round</label>
+                    <input type="number" class="form-control" name="myRound" id="field_myRound"
+                        [(ngModel)]="quiz.myRound" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.quiz.startTime" for="field_startTime">Start Time</label>
+                    <div class="d-flex">
+                        <input id="field_startTime" type="datetime-local" class="form-control" name="startTime" [(ngModel)]="startTime"
+                        />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.quiz.successTime" for="field_successTime">Success Time</label>
+                    <div class="d-flex">
+                        <input id="field_successTime" type="datetime-local" class="form-control" name="successTime" [(ngModel)]="successTime"
+                        />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.quiz.topmostSeconds" for="field_topmostSeconds">Topmost Seconds</label>
+                    <input type="number" class="form-control" name="topmostSeconds" id="field_topmostSeconds"
+                        [(ngModel)]="quiz.topmostSeconds" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.quiz.costSeconds" for="field_costSeconds">Cost Seconds</label>
+                    <input type="number" class="form-control" name="costSeconds" id="field_costSeconds"
+                        [(ngModel)]="quiz.costSeconds" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.quiz.mark" for="field_mark">Mark</label>
+                    <input type="number" class="form-control" name="mark" id="field_mark"
+                        [(ngModel)]="quiz.mark" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.quiz.passCount" for="field_passCount">Pass Count</label>
+                    <input type="number" class="form-control" name="passCount" id="field_passCount"
+                        [(ngModel)]="quiz.passCount" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.quiz.failCount" for="field_failCount">Fail Count</label>
+                    <input type="number" class="form-control" name="failCount" id="field_failCount"
+                        [(ngModel)]="quiz.failCount" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.quiz.centCount" for="field_centCount">Cent Count</label>
+                    <input type="number" class="form-control" name="centCount" id="field_centCount"
+                        [(ngModel)]="quiz.centCount" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.quiz.point" for="field_point">Point</label>
+                    <input type="number" class="form-control" name="point" id="field_point"
+                        [(ngModel)]="quiz.point" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.quiz.used" for="field_used">Used</label>
+                    <input type="checkbox" class="form-control" name="used" id="field_used"
+                        [(ngModel)]="quiz.used" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.quiz.useTime" for="field_useTime">Use Time</label>
+                    <div class="d-flex">
+                        <input id="field_useTime" type="datetime-local" class="form-control" name="useTime" [(ngModel)]="useTime"
+                        />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.quiz.useNote" for="field_useNote">Use Note</label>
+                    <input type="text" class="form-control" name="useNote" id="field_useNote"
+                        [(ngModel)]="quiz.useNote" />
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

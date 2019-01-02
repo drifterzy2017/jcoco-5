@@ -1,0 +1,61 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="question">
+            <h2><span jhiTranslate="jcoco5App.question.detail.title">Question</span> {{question.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jcoco5App.question.libName">Lib Name</span></dt>
+                <dd>
+                    <span>{{question.libName}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.question.ask">Ask</span></dt>
+                <dd>
+                    <span>{{question.ask}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.question.answer">Answer</span></dt>
+                <dd>
+                    <span>{{question.answer}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.question.countPass">Count Pass</span></dt>
+                <dd>
+                    <span>{{question.countPass}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.question.countFail">Count Fail</span></dt>
+                <dd>
+                    <span>{{question.countFail}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.question.countRate">Count Rate</span></dt>
+                <dd>
+                    <span>{{question.countRate}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.question.countPassAgain">Count Pass Again</span></dt>
+                <dd>
+                    <span>{{question.countPassAgain}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.question.isPass">Is Pass</span></dt>
+                <dd>
+                    <span>{{question.isPass}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.question.quiz">Quiz</span></dt>
+                <dd>
+                    <div *ngIf="question.quiz">
+                        <a [routerLink]="['/quiz', question.quiz?.id, 'view']">{{question.quiz?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/question', question.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

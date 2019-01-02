@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+
+    <property name="now" value="GETDATE()" dbms="mssql"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql"/>
+
+    <!--
+        Added the entity Quiz.
+    -->
+    <changeSet id="20181228064603-1" author="jhipster">
+        <createTable tableName="quiz">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="test_key" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="test_name" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="lib_name" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="is_auto_submit" type="boolean">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="my_round" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="start_time" type="datetime">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="success_time" type="datetime">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="topmost_seconds" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cost_seconds" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="mark" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="pass_count" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="fail_count" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cent_count" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="point" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="used" type="boolean">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="use_time" type="datetime">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="use_note" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
+        </createTable>
+        <dropDefaultValue tableName="quiz" columnName="start_time" columnDataType="datetime"/>
+        <dropDefaultValue tableName="quiz" columnName="success_time" columnDataType="datetime"/>
+        <dropDefaultValue tableName="quiz" columnName="use_time" columnDataType="datetime"/>
+        
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here, do not remove-->
+</databaseChangeLog>

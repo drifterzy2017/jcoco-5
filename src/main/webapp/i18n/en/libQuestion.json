@@ -1,0 +1,28 @@
+{
+    "jcoco5App": {
+        "libQuestion": {
+            "home": {
+                "title": "Lib Questions",
+                "createLabel": "Create a new Lib Question",
+                "createOrEditLabel": "Create or edit a Lib Question"
+            },
+            "created": "A new Lib Question is created with identifier {{ param }}",
+            "updated": "A Lib Question is updated with identifier {{ param }}",
+            "deleted": "A Lib Question is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Lib Question {{ id }}?"
+            },
+            "detail": {
+                "title": "Lib Question"
+            },
+            "libName": "Lib Name",
+            "ask": "Ask",
+            "answer": "Answer",
+            "countPass": "Count Pass",
+            "countFail": "Count Fail",
+            "countRate": "Count Rate",
+            "countPassAgain": "Count Pass Again",
+            "isPass": "Is Pass"
+        }
+    }
+}

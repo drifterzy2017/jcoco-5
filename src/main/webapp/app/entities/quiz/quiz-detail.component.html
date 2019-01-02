@@ -1,0 +1,91 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="quiz">
+            <h2><span jhiTranslate="jcoco5App.quiz.detail.title">Quiz</span> {{quiz.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jcoco5App.quiz.testKey">Test Key</span></dt>
+                <dd>
+                    <span>{{quiz.testKey}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.quiz.testName">Test Name</span></dt>
+                <dd>
+                    <span>{{quiz.testName}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.quiz.libName">Lib Name</span></dt>
+                <dd>
+                    <span>{{quiz.libName}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.quiz.isAutoSubmit">Is Auto Submit</span></dt>
+                <dd>
+                    <span>{{quiz.isAutoSubmit}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.quiz.myRound">My Round</span></dt>
+                <dd>
+                    <span>{{quiz.myRound}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.quiz.startTime">Start Time</span></dt>
+                <dd>
+                    <span>{{quiz.startTime}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.quiz.successTime">Success Time</span></dt>
+                <dd>
+                    <span>{{quiz.successTime}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.quiz.topmostSeconds">Topmost Seconds</span></dt>
+                <dd>
+                    <span>{{quiz.topmostSeconds}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.quiz.costSeconds">Cost Seconds</span></dt>
+                <dd>
+                    <span>{{quiz.costSeconds}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.quiz.mark">Mark</span></dt>
+                <dd>
+                    <span>{{quiz.mark}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.quiz.passCount">Pass Count</span></dt>
+                <dd>
+                    <span>{{quiz.passCount}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.quiz.failCount">Fail Count</span></dt>
+                <dd>
+                    <span>{{quiz.failCount}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.quiz.centCount">Cent Count</span></dt>
+                <dd>
+                    <span>{{quiz.centCount}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.quiz.point">Point</span></dt>
+                <dd>
+                    <span>{{quiz.point}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.quiz.used">Used</span></dt>
+                <dd>
+                    <span>{{quiz.used}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.quiz.useTime">Use Time</span></dt>
+                <dd>
+                    <span>{{quiz.useTime}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.quiz.useNote">Use Note</span></dt>
+                <dd>
+                    <span>{{quiz.useNote}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/quiz', quiz.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-lib-question-heading" jhiTranslate="jcoco5App.libQuestion.home.createOrEditLabel">Create or edit a Lib Question</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!libQuestion.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="libQuestion.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.libQuestion.libName" for="field_libName">Lib Name</label>
+                    <input type="text" class="form-control" name="libName" id="field_libName"
+                        [(ngModel)]="libQuestion.libName" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.libQuestion.ask" for="field_ask">Ask</label>
+                    <input type="text" class="form-control" name="ask" id="field_ask"
+                        [(ngModel)]="libQuestion.ask" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.libQuestion.answer" for="field_answer">Answer</label>
+                    <input type="text" class="form-control" name="answer" id="field_answer"
+                        [(ngModel)]="libQuestion.answer" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.libQuestion.countPass" for="field_countPass">Count Pass</label>
+                    <input type="number" class="form-control" name="countPass" id="field_countPass"
+                        [(ngModel)]="libQuestion.countPass" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.libQuestion.countFail" for="field_countFail">Count Fail</label>
+                    <input type="number" class="form-control" name="countFail" id="field_countFail"
+                        [(ngModel)]="libQuestion.countFail" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.libQuestion.countRate" for="field_countRate">Count Rate</label>
+                    <input type="number" class="form-control" name="countRate" id="field_countRate"
+                        [(ngModel)]="libQuestion.countRate" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.libQuestion.countPassAgain" for="field_countPassAgain">Count Pass Again</label>
+                    <input type="number" class="form-control" name="countPassAgain" id="field_countPassAgain"
+                        [(ngModel)]="libQuestion.countPassAgain" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.libQuestion.isPass" for="field_isPass">Is Pass</label>
+                    <input type="checkbox" class="form-control" name="isPass" id="field_isPass"
+                        [(ngModel)]="libQuestion.isPass" />
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

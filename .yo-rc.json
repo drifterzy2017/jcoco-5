@@ -1,0 +1,36 @@
+{
+    "generator-jhipster": {
+        "promptValues": {
+            "packageName": "com.kkk.cocoapp",
+            "nativeLanguage": "en"
+        },
+        "jhipsterVersion": "5.7.1",
+        "applicationType": "monolith",
+        "baseName": "jcoco5",
+        "packageName": "com.kkk.cocoapp",
+        "packageFolder": "com/kkk/cocoapp",
+        "serverPort": "8080",
+        "authenticationType": "jwt",
+        "cacheProvider": "ehcache",
+        "enableHibernateCache": true,
+        "websocket": false,
+        "databaseType": "sql",
+        "devDatabaseType": "mssql",
+        "prodDatabaseType": "mssql",
+        "searchEngine": false,
+        "messageBroker": false,
+        "serviceDiscoveryType": false,
+        "buildTool": "maven",
+        "enableSwaggerCodegen": false,
+        "jwtSecretKey": "ZGU1NmY2NzIwYTEwMDU2NGUxYzVkNWM5YmI1NDk4NjNmNzBlNTdhMDZiMDBhMDM3MzA2YTUzZGU5OGFjZWRjMGQ4Y2EwMTIzMzU1MzE2NTVlOGYzMDYyNjIwNzQyMDc5NDE2NjBlNDFiMWU0YjI3YjJjMTY3N2FkOTE1ODVmZDY=",
+        "clientFramework": "angularX",
+        "useSass": true,
+        "clientPackageManager": "npm",
+        "testFrameworks": [],
+        "jhiPrefix": "jhi",
+        "otherModules": [],
+        "enableTranslation": true,
+        "nativeLanguage": "en",
+        "languages": ["en"]
+    }
+}

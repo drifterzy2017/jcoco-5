@@ -1,0 +1,47 @@
+{
+    "name": "LibQuestion",
+    "fields": [
+        {
+            "fieldName": "libName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ask",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "answer",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "countPass",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "countFail",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "countRate",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "countPassAgain",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "isPass",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20181228064601",
+    "entityTableName": "lib_question",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

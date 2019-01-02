@@ -1,0 +1,72 @@
+entity    Bill {
+        Name String
+        Url  String
+        Price Integer
+        BuyTime Instant
+}
+
+
+entity    LibQuestion {
+        LibName String
+
+        Ask  String
+        Answer  String
+
+        CountPass Integer
+        CountFail Integer
+        CountRate Integer
+        CountPassAgain Integer
+
+        IsPass Boolean
+}
+
+entity    Question {
+        LibName String
+
+        Ask  String
+        Answer  String
+
+        CountPass Integer
+        CountFail Integer
+        CountRate Integer
+        CountPassAgain Integer
+
+        IsPass Boolean
+
+}
+
+entity    Quiz {		
+		TestKey  String
+
+        TestName  String
+
+        LibName String
+
+        IsAutoSubmit Boolean
+        MyRound  Integer		
+        
+		
+        StartTime Instant
+        SuccessTime Instant
+        TopmostSeconds Integer
+		CostSeconds Integer
+		Mark	Float
+		
+		PassCount   Integer
+		FailCount Integer
+		CentCount Integer
+
+		Point Integer
+
+        Used  Boolean
+        UseTime Instant
+        UseNote String 
+}
+
+relationship OneToMany {
+    Quiz to Question 
+}     
+
+// dto Quiz with mapstruct
+
+service all with serviceImpl
