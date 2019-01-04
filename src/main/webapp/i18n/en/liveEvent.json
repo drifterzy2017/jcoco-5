@@ -1,0 +1,39 @@
+{
+    "jcoco5App": {
+        "liveEvent": {
+            "home": {
+                "title": "Live Events",
+                "createLabel": "Create a new Live Event",
+                "createOrEditLabel": "Create or edit a Live Event"
+            },
+            "created": "A new Live Event is created with identifier {{ param }}",
+            "updated": "A Live Event is updated with identifier {{ param }}",
+            "deleted": "A Live Event is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Live Event {{ id }}?"
+            },
+            "detail": {
+                "title": "Live Event"
+            },
+            "liveEventId": "Live Event Id",
+            "birthTime": "Birth Time",
+            "clearedById": "Cleared By Id",
+            "clearedByName": "Cleared By Name",
+            "clearTime": "Clear Time",
+            "comment": "Comment",
+            "confirmerId": "Confirmer Id",
+            "confirmerName": "Confirmer Name",
+            "confirmTime": "Confirm Time",
+            "corePointId": "Core Point Id",
+            "corePointName": "Core Point Name",
+            "coreSourceId": "Core Source Id",
+            "coreSourceName": "Core Source Name",
+            "occurRemark": "Occur Remark",
+            "occurValue": "Occur Value",
+            "severityId": "Severity Id",
+            "severityName": "Severity Name",
+            "stateId": "State Id",
+            "stateName": "State Name"
+        }
+    }
+}

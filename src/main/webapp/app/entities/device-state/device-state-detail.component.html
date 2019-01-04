@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="deviceState">
+            <h2><span jhiTranslate="jcoco5App.deviceState.detail.title">Device State</span> {{deviceState.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jcoco5App.deviceState.stateId">State Id</span></dt>
+                <dd>
+                    <span>{{deviceState.stateId}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.deviceState.stateName">State Name</span></dt>
+                <dd>
+                    <span>{{deviceState.stateName}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.deviceState.remark">Remark</span></dt>
+                <dd>
+                    <span>{{deviceState.remark}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/device-state', deviceState.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

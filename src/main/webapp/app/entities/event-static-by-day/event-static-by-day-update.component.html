@@ -1,0 +1,49 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-event-static-by-day-heading" jhiTranslate="jcoco5App.eventStaticByDay.home.createOrEditLabel">Create or edit a Event Static By Day</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!eventStaticByDay.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="eventStaticByDay.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.eventStaticByDay.staticDay" for="field_staticDay">Static Day</label>
+                    <input type="number" class="form-control" name="staticDay" id="field_staticDay"
+                        [(ngModel)]="eventStaticByDay.staticDay" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.eventStaticByDay.severity1" for="field_severity1">Severity 1</label>
+                    <input type="number" class="form-control" name="severity1" id="field_severity1"
+                        [(ngModel)]="eventStaticByDay.severity1" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.eventStaticByDay.severity2" for="field_severity2">Severity 2</label>
+                    <input type="number" class="form-control" name="severity2" id="field_severity2"
+                        [(ngModel)]="eventStaticByDay.severity2" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.eventStaticByDay.severity3" for="field_severity3">Severity 3</label>
+                    <input type="number" class="form-control" name="severity3" id="field_severity3"
+                        [(ngModel)]="eventStaticByDay.severity3" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.eventStaticByDay.severity4" for="field_severity4">Severity 4</label>
+                    <input type="number" class="form-control" name="severity4" id="field_severity4"
+                        [(ngModel)]="eventStaticByDay.severity4" />
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

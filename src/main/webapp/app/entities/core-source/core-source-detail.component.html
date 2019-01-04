@@ -1,0 +1,43 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="coreSource">
+            <h2><span jhiTranslate="jcoco5App.coreSource.detail.title">Core Source</span> {{coreSource.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jcoco5App.coreSource.coreSourceId">Core Source Id</span></dt>
+                <dd>
+                    <span>{{coreSource.coreSourceId}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.coreSource.sourceName">Source Name</span></dt>
+                <dd>
+                    <span>{{coreSource.sourceName}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.coreSource.engineId">Engine Id</span></dt>
+                <dd>
+                    <span>{{coreSource.engineId}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.coreSource.mapperId">Mapper Id</span></dt>
+                <dd>
+                    <span>{{coreSource.mapperId}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.coreSource.linkState">Link State</span></dt>
+                <dd>
+                    <span>{{coreSource.linkState}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/core-source', coreSource.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

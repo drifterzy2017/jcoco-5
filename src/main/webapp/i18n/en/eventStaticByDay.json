@@ -1,0 +1,25 @@
+{
+    "jcoco5App": {
+        "eventStaticByDay": {
+            "home": {
+                "title": "Event Static By Days",
+                "createLabel": "Create a new Event Static By Day",
+                "createOrEditLabel": "Create or edit a Event Static By Day"
+            },
+            "created": "A new Event Static By Day is created with identifier {{ param }}",
+            "updated": "A Event Static By Day is updated with identifier {{ param }}",
+            "deleted": "A Event Static By Day is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Event Static By Day {{ id }}?"
+            },
+            "detail": {
+                "title": "Event Static By Day"
+            },
+            "staticDay": "Static Day",
+            "severity1": "Severity 1",
+            "severity2": "Severity 2",
+            "severity3": "Severity 3",
+            "severity4": "Severity 4"
+        }
+    }
+}

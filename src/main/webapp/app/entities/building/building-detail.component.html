@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="building">
+            <h2><span jhiTranslate="jcoco5App.building.detail.title">Building</span> {{building.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jcoco5App.building.buildingId">Building Id</span></dt>
+                <dd>
+                    <span>{{building.buildingId}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.building.buildingName">Building Name</span></dt>
+                <dd>
+                    <span>{{building.buildingName}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.building.description">Description</span></dt>
+                <dd>
+                    <span>{{building.description}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.building.parkId">Park Id</span></dt>
+                <dd>
+                    <span>{{building.parkId}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/building', building.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

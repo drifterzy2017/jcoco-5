@@ -1,0 +1,125 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-live-event-heading" jhiTranslate="jcoco5App.liveEvent.home.createOrEditLabel">Create or edit a Live Event</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!liveEvent.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="liveEvent.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.liveEvent.liveEventId" for="field_liveEventId">Live Event Id</label>
+                    <input type="number" class="form-control" name="liveEventId" id="field_liveEventId"
+                        [(ngModel)]="liveEvent.liveEventId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.liveEvent.birthTime" for="field_birthTime">Birth Time</label>
+                    <div class="d-flex">
+                        <input id="field_birthTime" type="datetime-local" class="form-control" name="birthTime" [(ngModel)]="birthTime"
+                        />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.liveEvent.clearedById" for="field_clearedById">Cleared By Id</label>
+                    <input type="number" class="form-control" name="clearedById" id="field_clearedById"
+                        [(ngModel)]="liveEvent.clearedById" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.liveEvent.clearedByName" for="field_clearedByName">Cleared By Name</label>
+                    <input type="text" class="form-control" name="clearedByName" id="field_clearedByName"
+                        [(ngModel)]="liveEvent.clearedByName" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.liveEvent.clearTime" for="field_clearTime">Clear Time</label>
+                    <div class="d-flex">
+                        <input id="field_clearTime" type="datetime-local" class="form-control" name="clearTime" [(ngModel)]="clearTime"
+                        />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.liveEvent.comment" for="field_comment">Comment</label>
+                    <input type="text" class="form-control" name="comment" id="field_comment"
+                        [(ngModel)]="liveEvent.comment" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.liveEvent.confirmerId" for="field_confirmerId">Confirmer Id</label>
+                    <input type="number" class="form-control" name="confirmerId" id="field_confirmerId"
+                        [(ngModel)]="liveEvent.confirmerId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.liveEvent.confirmerName" for="field_confirmerName">Confirmer Name</label>
+                    <input type="text" class="form-control" name="confirmerName" id="field_confirmerName"
+                        [(ngModel)]="liveEvent.confirmerName" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.liveEvent.confirmTime" for="field_confirmTime">Confirm Time</label>
+                    <div class="d-flex">
+                        <input id="field_confirmTime" type="datetime-local" class="form-control" name="confirmTime" [(ngModel)]="confirmTime"
+                        />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.liveEvent.corePointId" for="field_corePointId">Core Point Id</label>
+                    <input type="number" class="form-control" name="corePointId" id="field_corePointId"
+                        [(ngModel)]="liveEvent.corePointId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.liveEvent.corePointName" for="field_corePointName">Core Point Name</label>
+                    <input type="text" class="form-control" name="corePointName" id="field_corePointName"
+                        [(ngModel)]="liveEvent.corePointName" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.liveEvent.coreSourceId" for="field_coreSourceId">Core Source Id</label>
+                    <input type="number" class="form-control" name="coreSourceId" id="field_coreSourceId"
+                        [(ngModel)]="liveEvent.coreSourceId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.liveEvent.coreSourceName" for="field_coreSourceName">Core Source Name</label>
+                    <input type="text" class="form-control" name="coreSourceName" id="field_coreSourceName"
+                        [(ngModel)]="liveEvent.coreSourceName" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.liveEvent.occurRemark" for="field_occurRemark">Occur Remark</label>
+                    <input type="text" class="form-control" name="occurRemark" id="field_occurRemark"
+                        [(ngModel)]="liveEvent.occurRemark" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.liveEvent.occurValue" for="field_occurValue">Occur Value</label>
+                    <input type="text" class="form-control" name="occurValue" id="field_occurValue"
+                        [(ngModel)]="liveEvent.occurValue" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.liveEvent.severityId" for="field_severityId">Severity Id</label>
+                    <input type="number" class="form-control" name="severityId" id="field_severityId"
+                        [(ngModel)]="liveEvent.severityId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.liveEvent.severityName" for="field_severityName">Severity Name</label>
+                    <input type="text" class="form-control" name="severityName" id="field_severityName"
+                        [(ngModel)]="liveEvent.severityName" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.liveEvent.stateId" for="field_stateId">State Id</label>
+                    <input type="number" class="form-control" name="stateId" id="field_stateId"
+                        [(ngModel)]="liveEvent.stateId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.liveEvent.stateName" for="field_stateName">State Name</label>
+                    <input type="text" class="form-control" name="stateName" id="field_stateName"
+                        [(ngModel)]="liveEvent.stateName" />
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

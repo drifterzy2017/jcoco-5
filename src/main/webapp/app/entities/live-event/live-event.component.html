@@ -1,0 +1,90 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="jcoco5App.liveEvent.home.title">Live Events</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-live-event" [routerLink]="['/live-event/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="jcoco5App.liveEvent.home.createLabel">
+            Create new Live Event
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="liveEvents">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="jcoco5App.liveEvent.liveEventId">Live Event Id</span></th>
+            <th><span jhiTranslate="jcoco5App.liveEvent.birthTime">Birth Time</span></th>
+            <th><span jhiTranslate="jcoco5App.liveEvent.clearedById">Cleared By Id</span></th>
+            <th><span jhiTranslate="jcoco5App.liveEvent.clearedByName">Cleared By Name</span></th>
+            <th><span jhiTranslate="jcoco5App.liveEvent.clearTime">Clear Time</span></th>
+            <th><span jhiTranslate="jcoco5App.liveEvent.comment">Comment</span></th>
+            <th><span jhiTranslate="jcoco5App.liveEvent.confirmerId">Confirmer Id</span></th>
+            <th><span jhiTranslate="jcoco5App.liveEvent.confirmerName">Confirmer Name</span></th>
+            <th><span jhiTranslate="jcoco5App.liveEvent.confirmTime">Confirm Time</span></th>
+            <th><span jhiTranslate="jcoco5App.liveEvent.corePointId">Core Point Id</span></th>
+            <th><span jhiTranslate="jcoco5App.liveEvent.corePointName">Core Point Name</span></th>
+            <th><span jhiTranslate="jcoco5App.liveEvent.coreSourceId">Core Source Id</span></th>
+            <th><span jhiTranslate="jcoco5App.liveEvent.coreSourceName">Core Source Name</span></th>
+            <th><span jhiTranslate="jcoco5App.liveEvent.occurRemark">Occur Remark</span></th>
+            <th><span jhiTranslate="jcoco5App.liveEvent.occurValue">Occur Value</span></th>
+            <th><span jhiTranslate="jcoco5App.liveEvent.severityId">Severity Id</span></th>
+            <th><span jhiTranslate="jcoco5App.liveEvent.severityName">Severity Name</span></th>
+            <th><span jhiTranslate="jcoco5App.liveEvent.stateId">State Id</span></th>
+            <th><span jhiTranslate="jcoco5App.liveEvent.stateName">State Name</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let liveEvent of liveEvents ;trackBy: trackId">
+                <td><a [routerLink]="['/live-event', liveEvent.id, 'view' ]">{{liveEvent.id}}</a></td>
+                <td>{{liveEvent.liveEventId}}</td>
+                <td>{{liveEvent.birthTime | date:'medium'}}</td>
+                <td>{{liveEvent.clearedById}}</td>
+                <td>{{liveEvent.clearedByName}}</td>
+                <td>{{liveEvent.clearTime | date:'medium'}}</td>
+                <td>{{liveEvent.comment}}</td>
+                <td>{{liveEvent.confirmerId}}</td>
+                <td>{{liveEvent.confirmerName}}</td>
+                <td>{{liveEvent.confirmTime | date:'medium'}}</td>
+                <td>{{liveEvent.corePointId}}</td>
+                <td>{{liveEvent.corePointName}}</td>
+                <td>{{liveEvent.coreSourceId}}</td>
+                <td>{{liveEvent.coreSourceName}}</td>
+                <td>{{liveEvent.occurRemark}}</td>
+                <td>{{liveEvent.occurValue}}</td>
+                <td>{{liveEvent.severityId}}</td>
+                <td>{{liveEvent.severityName}}</td>
+                <td>{{liveEvent.stateId}}</td>
+                <td>{{liveEvent.stateName}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/live-event', liveEvent.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/live-event', liveEvent.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'live-event/'+ liveEvent.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+{
+    "jcoco5App": {
+        "coreEventSeverity": {
+            "home": {
+                "title": "Core Event Severities",
+                "createLabel": "Create a new Core Event Severity",
+                "createOrEditLabel": "Create or edit a Core Event Severity"
+            },
+            "created": "A new Core Event Severity is created with identifier {{ param }}",
+            "updated": "A Core Event Severity is updated with identifier {{ param }}",
+            "deleted": "A Core Event Severity is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Core Event Severity {{ id }}?"
+            },
+            "detail": {
+                "title": "Core Event Severity"
+            },
+            "eventSeverityId": "Event Severity Id",
+            "severityName": "Severity Name"
+        }
+    }
+}

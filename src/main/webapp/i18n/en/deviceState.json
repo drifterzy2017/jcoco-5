@@ -1,0 +1,23 @@
+{
+    "jcoco5App": {
+        "deviceState": {
+            "home": {
+                "title": "Device States",
+                "createLabel": "Create a new Device State",
+                "createOrEditLabel": "Create or edit a Device State"
+            },
+            "created": "A new Device State is created with identifier {{ param }}",
+            "updated": "A Device State is updated with identifier {{ param }}",
+            "deleted": "A Device State is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Device State {{ id }}?"
+            },
+            "detail": {
+                "title": "Device State"
+            },
+            "stateId": "State Id",
+            "stateName": "State Name",
+            "remark": "Remark"
+        }
+    }
+}

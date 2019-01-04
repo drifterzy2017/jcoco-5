@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="floor">
+            <h2><span jhiTranslate="jcoco5App.floor.detail.title">Floor</span> {{floor.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jcoco5App.floor.floorId">Floor Id</span></dt>
+                <dd>
+                    <span>{{floor.floorId}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.floor.buildingId">Building Id</span></dt>
+                <dd>
+                    <span>{{floor.buildingId}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.floor.description">Description</span></dt>
+                <dd>
+                    <span>{{floor.description}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.floor.floorName">Floor Name</span></dt>
+                <dd>
+                    <span>{{floor.floorName}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/floor', floor.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

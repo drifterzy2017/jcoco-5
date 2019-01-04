@@ -1,0 +1,99 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="liveEvent">
+            <h2><span jhiTranslate="jcoco5App.liveEvent.detail.title">Live Event</span> {{liveEvent.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jcoco5App.liveEvent.liveEventId">Live Event Id</span></dt>
+                <dd>
+                    <span>{{liveEvent.liveEventId}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.liveEvent.birthTime">Birth Time</span></dt>
+                <dd>
+                    <span>{{liveEvent.birthTime}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.liveEvent.clearedById">Cleared By Id</span></dt>
+                <dd>
+                    <span>{{liveEvent.clearedById}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.liveEvent.clearedByName">Cleared By Name</span></dt>
+                <dd>
+                    <span>{{liveEvent.clearedByName}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.liveEvent.clearTime">Clear Time</span></dt>
+                <dd>
+                    <span>{{liveEvent.clearTime}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.liveEvent.comment">Comment</span></dt>
+                <dd>
+                    <span>{{liveEvent.comment}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.liveEvent.confirmerId">Confirmer Id</span></dt>
+                <dd>
+                    <span>{{liveEvent.confirmerId}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.liveEvent.confirmerName">Confirmer Name</span></dt>
+                <dd>
+                    <span>{{liveEvent.confirmerName}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.liveEvent.confirmTime">Confirm Time</span></dt>
+                <dd>
+                    <span>{{liveEvent.confirmTime}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.liveEvent.corePointId">Core Point Id</span></dt>
+                <dd>
+                    <span>{{liveEvent.corePointId}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.liveEvent.corePointName">Core Point Name</span></dt>
+                <dd>
+                    <span>{{liveEvent.corePointName}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.liveEvent.coreSourceId">Core Source Id</span></dt>
+                <dd>
+                    <span>{{liveEvent.coreSourceId}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.liveEvent.coreSourceName">Core Source Name</span></dt>
+                <dd>
+                    <span>{{liveEvent.coreSourceName}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.liveEvent.occurRemark">Occur Remark</span></dt>
+                <dd>
+                    <span>{{liveEvent.occurRemark}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.liveEvent.occurValue">Occur Value</span></dt>
+                <dd>
+                    <span>{{liveEvent.occurValue}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.liveEvent.severityId">Severity Id</span></dt>
+                <dd>
+                    <span>{{liveEvent.severityId}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.liveEvent.severityName">Severity Name</span></dt>
+                <dd>
+                    <span>{{liveEvent.severityName}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.liveEvent.stateId">State Id</span></dt>
+                <dd>
+                    <span>{{liveEvent.stateId}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.liveEvent.stateName">State Name</span></dt>
+                <dd>
+                    <span>{{liveEvent.stateName}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/live-event', liveEvent.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

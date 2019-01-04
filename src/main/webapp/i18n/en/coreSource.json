@@ -1,0 +1,25 @@
+{
+    "jcoco5App": {
+        "coreSource": {
+            "home": {
+                "title": "Core Sources",
+                "createLabel": "Create a new Core Source",
+                "createOrEditLabel": "Create or edit a Core Source"
+            },
+            "created": "A new Core Source is created with identifier {{ param }}",
+            "updated": "A Core Source is updated with identifier {{ param }}",
+            "deleted": "A Core Source is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Core Source {{ id }}?"
+            },
+            "detail": {
+                "title": "Core Source"
+            },
+            "coreSourceId": "Core Source Id",
+            "sourceName": "Source Name",
+            "engineId": "Engine Id",
+            "mapperId": "Mapper Id",
+            "linkState": "Link State"
+        }
+    }
+}
