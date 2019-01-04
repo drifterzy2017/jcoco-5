@@ -11,6 +11,16 @@
                 "libQuestion": "Lib Question",
                 "question": "Question",
                 "quiz": "Quiz",
+                "liveEvent": "Live Event",
+                "coreEventSeverity": "Core Event Severity",
+                "device": "Device",
+                "deviceState": "Device State",
+                "park": "Park",
+                "room": "Room",
+                "floor": "Floor",
+                "building": "Building",
+                "coreSource": "Core Source",
+                "eventStaticByDay": "Event Static By Day",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

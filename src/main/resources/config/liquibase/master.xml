@@ -9,6 +9,16 @@
     <include file="config/liquibase/changelog/20181228064601_added_entity_LibQuestion.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20181228064602_added_entity_Question.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20181228064603_added_entity_Quiz.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190102092810_added_entity_LiveEvent.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190103040752_added_entity_CoreEventSeverity.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190103063404_added_entity_Device.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190103090605_added_entity_DeviceState.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190103145723_added_entity_Park.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190103151345_added_entity_Room.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190103151346_added_entity_Floor.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190103151347_added_entity_Building.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190104001016_added_entity_CoreSource.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190104010611_added_entity_EventStaticByDay.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="config/liquibase/changelog/20181228064602_added_entity_constraints_Question.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->

@@ -555,7 +555,7 @@
                         <changeLogFile>src/main/resources/config/liquibase/master.xml</changeLogFile>
                         <diffChangeLogFile>src/main/resources/config/liquibase/changelog/${maven.build.timestamp}_changelog.xml</diffChangeLogFile>
                         <driver></driver>
-                        <url>jdbc:sqlserver://localhost:1433;database=jcoco5</url>
+                        <url>jdbc:sqlserver://localhost:1433;database=jcoco</url>
                         <defaultSchemaName></defaultSchemaName>
                         <username>z</username>
                         <password>zzzzzz</password>

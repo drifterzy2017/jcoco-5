@@ -1,3 +1,95 @@
+entity EventStaticByDay{
+	StaticDay Integer
+	Severity1 Integer
+	Severity2 Integer
+	Severity3 Integer
+	Severity4 Integer
+}
+
+entity CoreSource  {
+    CoreSourceId Integer
+    SourceName String
+    EngineId Integer
+    MapperId Integer
+    LinkState Integer
+}
+
+entity Room  {
+	 RoomId Integer
+	 Description String
+	 FloorId Integer
+	 RoomName String
+}
+
+entity Floor {
+	 FloorId Integer
+	 BuildingId Integer
+	 Description String
+	 FloorName String
+}
+
+entity Building{
+    BuildingId Integer
+    BuildingName String
+    Description String
+    ParkId Integer
+}
+
+entity Park{
+    ParkId Integer
+    Description String
+    Latitude Double
+    Longitude Double
+    ParkAddress String
+    ParkName String
+}
+
+
+entity DeviceState{
+    StateId Integer
+    StateName String
+    Remark String
+}
+
+entity Device{
+    DeviceId Integer
+    Description String
+    DeviceName String
+    RoomId Integer
+    DeviceCategory Integer
+    Status Integer
+    Masked Boolean
+}
+
+entity    CoreEventSeverity {
+    EventSeverityId Integer
+    SeverityName   String
+}
+
+
+entity    LiveEvent {
+    LiveEventId    Long
+    BirthTime Instant
+    ClearedById Integer
+    ClearedByName   String
+    ClearTime Instant
+    Comment String
+    ConfirmerId Integer
+    ConfirmerName    String
+    ConfirmTime Instant
+    CorePointId Integer
+    CorePointName String
+    CoreSourceId Integer
+    CoreSourceName String
+    OccurRemark String
+    OccurValue String
+    SeverityId Integer
+    SeverityName String
+    StateId Integer
+    StateName String
+}
+
+
 entity    Bill {
         Name String
         Url  String

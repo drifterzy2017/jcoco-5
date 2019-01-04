@@ -48,6 +48,16 @@ public class CacheConfiguration {
             cm.createCache(com.kkk.cocoapp.domain.Question.class.getName(), jcacheConfiguration);
             cm.createCache(com.kkk.cocoapp.domain.Quiz.class.getName(), jcacheConfiguration);
             cm.createCache(com.kkk.cocoapp.domain.Quiz.class.getName() + ".questions", jcacheConfiguration);
+            cm.createCache(com.kkk.cocoapp.domain.LiveEvent.class.getName(), jcacheConfiguration);
+            cm.createCache(com.kkk.cocoapp.domain.CoreEventSeverity.class.getName(), jcacheConfiguration);
+            cm.createCache(com.kkk.cocoapp.domain.Device.class.getName(), jcacheConfiguration);
+            cm.createCache(com.kkk.cocoapp.domain.DeviceState.class.getName(), jcacheConfiguration);
+            cm.createCache(com.kkk.cocoapp.domain.Park.class.getName(), jcacheConfiguration);
+            cm.createCache(com.kkk.cocoapp.domain.Room.class.getName(), jcacheConfiguration);
+            cm.createCache(com.kkk.cocoapp.domain.Floor.class.getName(), jcacheConfiguration);
+            cm.createCache(com.kkk.cocoapp.domain.Building.class.getName(), jcacheConfiguration);
+            cm.createCache(com.kkk.cocoapp.domain.CoreSource.class.getName(), jcacheConfiguration);
+            cm.createCache(com.kkk.cocoapp.domain.EventStaticByDay.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

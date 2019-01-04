@@ -46,8 +46,8 @@ public class MyAppFacadeService {
         this.libQuestionRepository = libQuestionRepository;
         this.myQuizFacts = myQuizFacts;
 
-        val Paras = AppParameter.getQLibNames().split("-");
-        val libName = Paras[0];
+        String[] Paras = AppParameter.getQLibNames().split("-");
+        String libName = Paras[0];
         quizFact = myQuizFacts.get(libName);
 //        quizFact = myQuizFacts.get("mix");
 
@@ -76,7 +76,7 @@ public class MyAppFacadeService {
             val s =f.substring(0,1);
             val si = Ints.tryParse(s);
             if(si==null)
-                continue;;
+                continue;
             if(!this.PriceList.contains(s))
                 this.PriceList.add(si);
 
@@ -115,7 +115,7 @@ public class MyAppFacadeService {
         quiz.setSuccessTime(Instant.now() );
 
         long span = Duration.between( quiz.getStartTime(), quiz.getSuccessTime()).toMillis()/1000;
-        quiz.setCostSeconds((Integer)((int)span));
+        quiz.setCostSeconds((int)span);
 
         boolean isTopMost = false;
         if (quiz.getTopmostSeconds() > 0 && quiz.getCostSeconds()< quiz.getTopmostSeconds()) {
@@ -219,7 +219,7 @@ public class MyAppFacadeService {
 
         val p = this.Products.stream().filter(o-> o.Name.equals(UseNote)).findFirst();
         if(p.isPresent()){
-            Product pp =(Product) p.get();
+            Product pp = p.get();
             bill.setUrl(pp.Url);
         }
         else

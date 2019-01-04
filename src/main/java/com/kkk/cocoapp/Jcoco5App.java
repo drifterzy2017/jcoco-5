@@ -3,9 +3,9 @@ package com.kkk.cocoapp;
 import com.kkk.cocoapp.config.ApplicationProperties;
 import com.kkk.cocoapp.config.DefaultProfileUtil;
 
+import com.kkk.cocoapp.service.phx.ActiveEventStatisticsManager;
 import io.github.jhipster.config.JHipsterConstants;
 
-import lombok.val;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -38,6 +38,9 @@ public class Jcoco5App {
     @Autowired
     private CacheManager cacheManager;
 
+    @Autowired
+    ActiveEventStatisticsManager activeEventStatisticsManager;
+
     /**
      * Initializes jcoco5.
      * <p>
@@ -57,9 +60,8 @@ public class Jcoco5App {
                 "run with both the 'dev' and 'cloud' profiles at the same time.");
         }
 
-        //todo 以后再优化
-//        val cache = cacheManager.getCache(com.kkk.cocoapp.repository.LibQuestionRepository.LIBQ_BY_NAME_CACHE);
-//        cache.clear();
+        //kkk-ph
+        activeEventStatisticsManager.init();
     }
 
     /**
@@ -75,6 +77,7 @@ public class Jcoco5App {
 
 
     }
+
 
     private static void logApplicationStartup(Environment env) {
         String protocol = "http";

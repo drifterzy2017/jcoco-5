@@ -134,7 +134,7 @@ public abstract class QuizFact {
 //        }
 
         //4倍题库
-        val moreAddCnt = AppParameter.getMyRound()*4 - ques.size();
+        int moreAddCnt = AppParameter.getMyRound()*4 - ques.size();
         if (moreAddCnt > 0) {
             val listSorted = MyQuestionPool.stream().sorted((a,b) ->  a.getCountRate()-b.getCountRate()).collect(Collectors.toList());
 
