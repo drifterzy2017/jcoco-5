@@ -1,0 +1,26 @@
+{
+    "jcoco5App": {
+        "pointMask": {
+            "home": {
+                "title": "Point Masks",
+                "createLabel": "Create a new Point Mask",
+                "createOrEditLabel": "Create or edit a Point Mask"
+            },
+            "created": "A new Point Mask is created with identifier {{ param }}",
+            "updated": "A Point Mask is updated with identifier {{ param }}",
+            "deleted": "A Point Mask is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Point Mask {{ id }}?"
+            },
+            "detail": {
+                "title": "Point Mask"
+            },
+            "userId": "User Id",
+            "userName": "User Name",
+            "comment": "Comment",
+            "corePointId": "Core Point Id",
+            "deviceId": "Device Id",
+            "operationTime": "Operation Time"
+        }
+    }
+}

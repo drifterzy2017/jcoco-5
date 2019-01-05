@@ -1,0 +1,66 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="jcoco5App.cov.home.title">Covs</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-cov" [routerLink]="['/cov/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="jcoco5App.cov.home.createLabel">
+            Create new Cov
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="covs">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="jcoco5App.cov.corePointId">Core Point Id</span></th>
+            <th><span jhiTranslate="jcoco5App.cov.coreSourceId">Core Source Id</span></th>
+            <th><span jhiTranslate="jcoco5App.cov.engineId">Engine Id</span></th>
+            <th><span jhiTranslate="jcoco5App.cov.qos">Qos</span></th>
+            <th><span jhiTranslate="jcoco5App.cov.birthTime">Birth Time</span></th>
+            <th><span jhiTranslate="jcoco5App.cov.value">Value</span></th>
+            <th><span jhiTranslate="jcoco5App.cov.state">State</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let cov of covs ;trackBy: trackId">
+                <td><a [routerLink]="['/cov', cov.id, 'view' ]">{{cov.id}}</a></td>
+                <td>{{cov.corePointId}}</td>
+                <td>{{cov.coreSourceId}}</td>
+                <td>{{cov.engineId}}</td>
+                <td>{{cov.qos}}</td>
+                <td>{{cov.birthTime | date:'medium'}}</td>
+                <td>{{cov.value}}</td>
+                <td>{{cov.state}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/cov', cov.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/cov', cov.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'cov/'+ cov.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

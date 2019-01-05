@@ -1,0 +1,35 @@
+{
+    "jcoco5App": {
+        "corePoint": {
+            "home": {
+                "title": "Core Points",
+                "createLabel": "Create a new Core Point",
+                "createOrEditLabel": "Create or edit a Core Point"
+            },
+            "created": "A new Core Point is created with identifier {{ param }}",
+            "updated": "A Core Point is updated with identifier {{ param }}",
+            "deleted": "A Core Point is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Core Point {{ id }}?"
+            },
+            "detail": {
+                "title": "Core Point"
+            },
+            "corePointId": "Core Point Id",
+            "pointName": "Point Name",
+            "accuracy": "Accuracy",
+            "unit": "Unit",
+            "max": "Max",
+            "min": "Min",
+            "coreSourceId": "Core Source Id",
+            "coreDataTypeId": "Core Data Type Id",
+            "eventSeverity": "Event Severity",
+            "stateRuleId": "State Rule Id",
+            "readable": "Readable",
+            "writable": "Writable",
+            "defaultValue": "Default Value",
+            "step": "Step",
+            "masked": "Masked"
+        }
+    }
+}

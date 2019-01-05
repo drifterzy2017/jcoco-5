@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="corePointMeaning">
+            <h2><span jhiTranslate="jcoco5App.corePointMeaning.detail.title">Core Point Meaning</span> {{corePointMeaning.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jcoco5App.corePointMeaning.coreSourceId">Core Source Id</span></dt>
+                <dd>
+                    <span>{{corePointMeaning.coreSourceId}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.corePointMeaning.corePointId">Core Point Id</span></dt>
+                <dd>
+                    <span>{{corePointMeaning.corePointId}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.corePointMeaning.value">Value</span></dt>
+                <dd>
+                    <span>{{corePointMeaning.value}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.corePointMeaning.meaning">Meaning</span></dt>
+                <dd>
+                    <span>{{corePointMeaning.meaning}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/core-point-meaning', corePointMeaning.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,61 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-cov-heading" jhiTranslate="jcoco5App.cov.home.createOrEditLabel">Create or edit a Cov</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!cov.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="cov.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.cov.corePointId" for="field_corePointId">Core Point Id</label>
+                    <input type="number" class="form-control" name="corePointId" id="field_corePointId"
+                        [(ngModel)]="cov.corePointId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.cov.coreSourceId" for="field_coreSourceId">Core Source Id</label>
+                    <input type="number" class="form-control" name="coreSourceId" id="field_coreSourceId"
+                        [(ngModel)]="cov.coreSourceId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.cov.engineId" for="field_engineId">Engine Id</label>
+                    <input type="number" class="form-control" name="engineId" id="field_engineId"
+                        [(ngModel)]="cov.engineId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.cov.qos" for="field_qos">Qos</label>
+                    <input type="number" class="form-control" name="qos" id="field_qos"
+                        [(ngModel)]="cov.qos" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.cov.birthTime" for="field_birthTime">Birth Time</label>
+                    <div class="d-flex">
+                        <input id="field_birthTime" type="datetime-local" class="form-control" name="birthTime" [(ngModel)]="birthTime"
+                        />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.cov.value" for="field_value">Value</label>
+                    <input type="text" class="form-control" name="value" id="field_value"
+                        [(ngModel)]="cov.value" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.cov.state" for="field_state">State</label>
+                    <input type="number" class="form-control" name="state" id="field_state"
+                        [(ngModel)]="cov.state" />
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

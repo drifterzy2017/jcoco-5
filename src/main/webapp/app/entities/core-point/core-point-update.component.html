@@ -1,0 +1,99 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-core-point-heading" jhiTranslate="jcoco5App.corePoint.home.createOrEditLabel">Create or edit a Core Point</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!corePoint.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="corePoint.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.corePoint.corePointId" for="field_corePointId">Core Point Id</label>
+                    <input type="number" class="form-control" name="corePointId" id="field_corePointId"
+                        [(ngModel)]="corePoint.corePointId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.corePoint.pointName" for="field_pointName">Point Name</label>
+                    <input type="text" class="form-control" name="pointName" id="field_pointName"
+                        [(ngModel)]="corePoint.pointName" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.corePoint.accuracy" for="field_accuracy">Accuracy</label>
+                    <input type="text" class="form-control" name="accuracy" id="field_accuracy"
+                        [(ngModel)]="corePoint.accuracy" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.corePoint.unit" for="field_unit">Unit</label>
+                    <input type="text" class="form-control" name="unit" id="field_unit"
+                        [(ngModel)]="corePoint.unit" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.corePoint.max" for="field_max">Max</label>
+                    <input type="text" class="form-control" name="max" id="field_max"
+                        [(ngModel)]="corePoint.max" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.corePoint.min" for="field_min">Min</label>
+                    <input type="text" class="form-control" name="min" id="field_min"
+                        [(ngModel)]="corePoint.min" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.corePoint.coreSourceId" for="field_coreSourceId">Core Source Id</label>
+                    <input type="number" class="form-control" name="coreSourceId" id="field_coreSourceId"
+                        [(ngModel)]="corePoint.coreSourceId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.corePoint.coreDataTypeId" for="field_coreDataTypeId">Core Data Type Id</label>
+                    <input type="number" class="form-control" name="coreDataTypeId" id="field_coreDataTypeId"
+                        [(ngModel)]="corePoint.coreDataTypeId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.corePoint.eventSeverity" for="field_eventSeverity">Event Severity</label>
+                    <input type="number" class="form-control" name="eventSeverity" id="field_eventSeverity"
+                        [(ngModel)]="corePoint.eventSeverity" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.corePoint.stateRuleId" for="field_stateRuleId">State Rule Id</label>
+                    <input type="number" class="form-control" name="stateRuleId" id="field_stateRuleId"
+                        [(ngModel)]="corePoint.stateRuleId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.corePoint.readable" for="field_readable">Readable</label>
+                    <input type="checkbox" class="form-control" name="readable" id="field_readable"
+                        [(ngModel)]="corePoint.readable" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.corePoint.writable" for="field_writable">Writable</label>
+                    <input type="checkbox" class="form-control" name="writable" id="field_writable"
+                        [(ngModel)]="corePoint.writable" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.corePoint.defaultValue" for="field_defaultValue">Default Value</label>
+                    <input type="text" class="form-control" name="defaultValue" id="field_defaultValue"
+                        [(ngModel)]="corePoint.defaultValue" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.corePoint.step" for="field_step">Step</label>
+                    <input type="number" class="form-control" name="step" id="field_step"
+                        [(ngModel)]="corePoint.step" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.corePoint.masked" for="field_masked">Masked</label>
+                    <input type="checkbox" class="form-control" name="masked" id="field_masked"
+                        [(ngModel)]="corePoint.masked" />
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+{
+    "jcoco5App": {
+        "deviceMask": {
+            "home": {
+                "title": "Device Masks",
+                "createLabel": "Create a new Device Mask",
+                "createOrEditLabel": "Create or edit a Device Mask"
+            },
+            "created": "A new Device Mask is created with identifier {{ param }}",
+            "updated": "A Device Mask is updated with identifier {{ param }}",
+            "deleted": "A Device Mask is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Device Mask {{ id }}?"
+            },
+            "detail": {
+                "title": "Device Mask"
+            },
+            "userId": "User Id",
+            "userName": "User Name",
+            "comment": "Comment",
+            "deviceId": "Device Id",
+            "operationTime": "Operation Time"
+        }
+    }
+}

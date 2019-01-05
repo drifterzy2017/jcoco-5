@@ -1,0 +1,47 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="pointMask">
+            <h2><span jhiTranslate="jcoco5App.pointMask.detail.title">Point Mask</span> {{pointMask.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jcoco5App.pointMask.userId">User Id</span></dt>
+                <dd>
+                    <span>{{pointMask.userId}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.pointMask.userName">User Name</span></dt>
+                <dd>
+                    <span>{{pointMask.userName}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.pointMask.comment">Comment</span></dt>
+                <dd>
+                    <span>{{pointMask.comment}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.pointMask.corePointId">Core Point Id</span></dt>
+                <dd>
+                    <span>{{pointMask.corePointId}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.pointMask.deviceId">Device Id</span></dt>
+                <dd>
+                    <span>{{pointMask.deviceId}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.pointMask.operationTime">Operation Time</span></dt>
+                <dd>
+                    <span>{{pointMask.operationTime}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/point-mask', pointMask.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

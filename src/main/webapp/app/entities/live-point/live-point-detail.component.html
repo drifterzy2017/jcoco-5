@@ -1,0 +1,55 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="livePoint">
+            <h2><span jhiTranslate="jcoco5App.livePoint.detail.title">Live Point</span> {{livePoint.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jcoco5App.livePoint.corePointId">Core Point Id</span></dt>
+                <dd>
+                    <span>{{livePoint.corePointId}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.livePoint.corePointName">Core Point Name</span></dt>
+                <dd>
+                    <span>{{livePoint.corePointName}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.livePoint.coreSourceId">Core Source Id</span></dt>
+                <dd>
+                    <span>{{livePoint.coreSourceId}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.livePoint.coreSourceName">Core Source Name</span></dt>
+                <dd>
+                    <span>{{livePoint.coreSourceName}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.livePoint.birthTime">Birth Time</span></dt>
+                <dd>
+                    <span>{{livePoint.birthTime}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.livePoint.collectValue">Collect Value</span></dt>
+                <dd>
+                    <span>{{livePoint.collectValue}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.livePoint.state">State</span></dt>
+                <dd>
+                    <span>{{livePoint.state}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.livePoint.severity">Severity</span></dt>
+                <dd>
+                    <span>{{livePoint.severity}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/live-point', livePoint.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

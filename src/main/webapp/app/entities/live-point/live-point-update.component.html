@@ -1,0 +1,66 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-live-point-heading" jhiTranslate="jcoco5App.livePoint.home.createOrEditLabel">Create or edit a Live Point</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!livePoint.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="livePoint.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.livePoint.corePointId" for="field_corePointId">Core Point Id</label>
+                    <input type="number" class="form-control" name="corePointId" id="field_corePointId"
+                        [(ngModel)]="livePoint.corePointId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.livePoint.corePointName" for="field_corePointName">Core Point Name</label>
+                    <input type="text" class="form-control" name="corePointName" id="field_corePointName"
+                        [(ngModel)]="livePoint.corePointName" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.livePoint.coreSourceId" for="field_coreSourceId">Core Source Id</label>
+                    <input type="number" class="form-control" name="coreSourceId" id="field_coreSourceId"
+                        [(ngModel)]="livePoint.coreSourceId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.livePoint.coreSourceName" for="field_coreSourceName">Core Source Name</label>
+                    <input type="text" class="form-control" name="coreSourceName" id="field_coreSourceName"
+                        [(ngModel)]="livePoint.coreSourceName" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.livePoint.birthTime" for="field_birthTime">Birth Time</label>
+                    <div class="d-flex">
+                        <input id="field_birthTime" type="datetime-local" class="form-control" name="birthTime" [(ngModel)]="birthTime"
+                        />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.livePoint.collectValue" for="field_collectValue">Collect Value</label>
+                    <input type="text" class="form-control" name="collectValue" id="field_collectValue"
+                        [(ngModel)]="livePoint.collectValue" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.livePoint.state" for="field_state">State</label>
+                    <input type="number" class="form-control" name="state" id="field_state"
+                        [(ngModel)]="livePoint.state" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.livePoint.severity" for="field_severity">Severity</label>
+                    <input type="number" class="form-control" name="severity" id="field_severity"
+                        [(ngModel)]="livePoint.severity" />
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

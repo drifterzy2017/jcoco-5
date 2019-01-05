@@ -1,0 +1,62 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="jcoco5App.deviceMask.home.title">Device Masks</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-device-mask" [routerLink]="['/device-mask/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="jcoco5App.deviceMask.home.createLabel">
+            Create new Device Mask
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="deviceMasks">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="jcoco5App.deviceMask.userId">User Id</span></th>
+            <th><span jhiTranslate="jcoco5App.deviceMask.userName">User Name</span></th>
+            <th><span jhiTranslate="jcoco5App.deviceMask.comment">Comment</span></th>
+            <th><span jhiTranslate="jcoco5App.deviceMask.deviceId">Device Id</span></th>
+            <th><span jhiTranslate="jcoco5App.deviceMask.operationTime">Operation Time</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let deviceMask of deviceMasks ;trackBy: trackId">
+                <td><a [routerLink]="['/device-mask', deviceMask.id, 'view' ]">{{deviceMask.id}}</a></td>
+                <td>{{deviceMask.userId}}</td>
+                <td>{{deviceMask.userName}}</td>
+                <td>{{deviceMask.comment}}</td>
+                <td>{{deviceMask.deviceId}}</td>
+                <td>{{deviceMask.operationTime | date:'medium'}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/device-mask', deviceMask.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/device-mask', deviceMask.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'device-mask/'+ deviceMask.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

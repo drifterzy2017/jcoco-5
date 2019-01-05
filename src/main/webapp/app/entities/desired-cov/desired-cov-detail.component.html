@@ -1,0 +1,55 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="desiredCov">
+            <h2><span jhiTranslate="jcoco5App.desiredCov.detail.title">Desired Cov</span> {{desiredCov.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jcoco5App.desiredCov.corePointId">Core Point Id</span></dt>
+                <dd>
+                    <span>{{desiredCov.corePointId}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.desiredCov.coreSourceId">Core Source Id</span></dt>
+                <dd>
+                    <span>{{desiredCov.coreSourceId}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.desiredCov.engineId">Engine Id</span></dt>
+                <dd>
+                    <span>{{desiredCov.engineId}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.desiredCov.desiredValue">Desired Value</span></dt>
+                <dd>
+                    <span>{{desiredCov.desiredValue}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.desiredCov.userId">User Id</span></dt>
+                <dd>
+                    <span>{{desiredCov.userId}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.desiredCov.birthTime">Birth Time</span></dt>
+                <dd>
+                    <span>{{desiredCov.birthTime}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.desiredCov.state">State</span></dt>
+                <dd>
+                    <span>{{desiredCov.state}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.desiredCov.message">Message</span></dt>
+                <dd>
+                    <span>{{desiredCov.message}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/desired-cov', desiredCov.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

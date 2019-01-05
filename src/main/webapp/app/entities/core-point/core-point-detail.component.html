@@ -1,0 +1,83 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="corePoint">
+            <h2><span jhiTranslate="jcoco5App.corePoint.detail.title">Core Point</span> {{corePoint.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jcoco5App.corePoint.corePointId">Core Point Id</span></dt>
+                <dd>
+                    <span>{{corePoint.corePointId}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.corePoint.pointName">Point Name</span></dt>
+                <dd>
+                    <span>{{corePoint.pointName}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.corePoint.accuracy">Accuracy</span></dt>
+                <dd>
+                    <span>{{corePoint.accuracy}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.corePoint.unit">Unit</span></dt>
+                <dd>
+                    <span>{{corePoint.unit}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.corePoint.max">Max</span></dt>
+                <dd>
+                    <span>{{corePoint.max}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.corePoint.min">Min</span></dt>
+                <dd>
+                    <span>{{corePoint.min}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.corePoint.coreSourceId">Core Source Id</span></dt>
+                <dd>
+                    <span>{{corePoint.coreSourceId}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.corePoint.coreDataTypeId">Core Data Type Id</span></dt>
+                <dd>
+                    <span>{{corePoint.coreDataTypeId}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.corePoint.eventSeverity">Event Severity</span></dt>
+                <dd>
+                    <span>{{corePoint.eventSeverity}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.corePoint.stateRuleId">State Rule Id</span></dt>
+                <dd>
+                    <span>{{corePoint.stateRuleId}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.corePoint.readable">Readable</span></dt>
+                <dd>
+                    <span>{{corePoint.readable}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.corePoint.writable">Writable</span></dt>
+                <dd>
+                    <span>{{corePoint.writable}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.corePoint.defaultValue">Default Value</span></dt>
+                <dd>
+                    <span>{{corePoint.defaultValue}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.corePoint.step">Step</span></dt>
+                <dd>
+                    <span>{{corePoint.step}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.corePoint.masked">Masked</span></dt>
+                <dd>
+                    <span>{{corePoint.masked}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/core-point', corePoint.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

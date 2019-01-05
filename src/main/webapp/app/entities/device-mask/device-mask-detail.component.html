@@ -1,0 +1,43 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="deviceMask">
+            <h2><span jhiTranslate="jcoco5App.deviceMask.detail.title">Device Mask</span> {{deviceMask.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jcoco5App.deviceMask.userId">User Id</span></dt>
+                <dd>
+                    <span>{{deviceMask.userId}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.deviceMask.userName">User Name</span></dt>
+                <dd>
+                    <span>{{deviceMask.userName}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.deviceMask.comment">Comment</span></dt>
+                <dd>
+                    <span>{{deviceMask.comment}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.deviceMask.deviceId">Device Id</span></dt>
+                <dd>
+                    <span>{{deviceMask.deviceId}}</span>
+                </dd>
+                <dt><span jhiTranslate="jcoco5App.deviceMask.operationTime">Operation Time</span></dt>
+                <dd>
+                    <span>{{deviceMask.operationTime}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/device-mask', deviceMask.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

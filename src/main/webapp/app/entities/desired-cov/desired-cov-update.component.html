@@ -1,0 +1,66 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-desired-cov-heading" jhiTranslate="jcoco5App.desiredCov.home.createOrEditLabel">Create or edit a Desired Cov</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!desiredCov.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="desiredCov.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.desiredCov.corePointId" for="field_corePointId">Core Point Id</label>
+                    <input type="number" class="form-control" name="corePointId" id="field_corePointId"
+                        [(ngModel)]="desiredCov.corePointId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.desiredCov.coreSourceId" for="field_coreSourceId">Core Source Id</label>
+                    <input type="number" class="form-control" name="coreSourceId" id="field_coreSourceId"
+                        [(ngModel)]="desiredCov.coreSourceId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.desiredCov.engineId" for="field_engineId">Engine Id</label>
+                    <input type="number" class="form-control" name="engineId" id="field_engineId"
+                        [(ngModel)]="desiredCov.engineId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.desiredCov.desiredValue" for="field_desiredValue">Desired Value</label>
+                    <input type="text" class="form-control" name="desiredValue" id="field_desiredValue"
+                        [(ngModel)]="desiredCov.desiredValue" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.desiredCov.userId" for="field_userId">User Id</label>
+                    <input type="number" class="form-control" name="userId" id="field_userId"
+                        [(ngModel)]="desiredCov.userId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.desiredCov.birthTime" for="field_birthTime">Birth Time</label>
+                    <div class="d-flex">
+                        <input id="field_birthTime" type="datetime-local" class="form-control" name="birthTime" [(ngModel)]="birthTime"
+                        />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.desiredCov.state" for="field_state">State</label>
+                    <input type="number" class="form-control" name="state" id="field_state"
+                        [(ngModel)]="desiredCov.state" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jcoco5App.desiredCov.message" for="field_message">Message</label>
+                    <input type="text" class="form-control" name="message" id="field_message"
+                        [(ngModel)]="desiredCov.message" />
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

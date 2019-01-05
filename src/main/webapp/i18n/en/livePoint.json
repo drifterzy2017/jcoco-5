@@ -1,0 +1,28 @@
+{
+    "jcoco5App": {
+        "livePoint": {
+            "home": {
+                "title": "Live Points",
+                "createLabel": "Create a new Live Point",
+                "createOrEditLabel": "Create or edit a Live Point"
+            },
+            "created": "A new Live Point is created with identifier {{ param }}",
+            "updated": "A Live Point is updated with identifier {{ param }}",
+            "deleted": "A Live Point is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Live Point {{ id }}?"
+            },
+            "detail": {
+                "title": "Live Point"
+            },
+            "corePointId": "Core Point Id",
+            "corePointName": "Core Point Name",
+            "coreSourceId": "Core Source Id",
+            "coreSourceName": "Core Source Name",
+            "birthTime": "Birth Time",
+            "collectValue": "Collect Value",
+            "state": "State",
+            "severity": "Severity"
+        }
+    }
+}

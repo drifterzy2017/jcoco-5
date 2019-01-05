@@ -1,0 +1,27 @@
+{
+    "jcoco5App": {
+        "cov": {
+            "home": {
+                "title": "Covs",
+                "createLabel": "Create a new Cov",
+                "createOrEditLabel": "Create or edit a Cov"
+            },
+            "created": "A new Cov is created with identifier {{ param }}",
+            "updated": "A Cov is updated with identifier {{ param }}",
+            "deleted": "A Cov is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Cov {{ id }}?"
+            },
+            "detail": {
+                "title": "Cov"
+            },
+            "corePointId": "Core Point Id",
+            "coreSourceId": "Core Source Id",
+            "engineId": "Engine Id",
+            "qos": "Qos",
+            "birthTime": "Birth Time",
+            "value": "Value",
+            "state": "State"
+        }
+    }
+}
