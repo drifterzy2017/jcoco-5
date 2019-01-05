@@ -46,7 +46,7 @@ public class MyAppFacadeService {
         this.libQuestionRepository = libQuestionRepository;
         this.myQuizFacts = myQuizFacts;
 
-        String[] Paras = AppParameter.getQLibNames().split("-");
+        String[] Paras = AppParameter.getqLibNames().split("-");
         String libName = Paras[0];
         quizFact = myQuizFacts.get(libName);
 //        quizFact = myQuizFacts.get("mix");

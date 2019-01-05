@@ -21,6 +21,13 @@
                 "building": "Building",
                 "coreSource": "Core Source",
                 "eventStaticByDay": "Event Static By Day",
+                "deviceMask": "Device Mask",
+                "corePoint": "Core Point",
+                "cov": "Cov",
+                "corePointMeaning": "Core Point Meaning",
+                "desiredCov": "Desired Cov",
+                "livePoint": "Live Point",
+                "pointMask": "Point Mask",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

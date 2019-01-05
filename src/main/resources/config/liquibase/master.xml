@@ -19,6 +19,13 @@
     <include file="config/liquibase/changelog/20190103151347_added_entity_Building.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20190104001016_added_entity_CoreSource.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20190104010611_added_entity_EventStaticByDay.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190104051345_added_entity_DeviceMask.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190104075432_added_entity_CorePoint.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190104080046_added_entity_Cov.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190104081321_added_entity_CorePointMeaning.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190104081851_added_entity_DesiredCov.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190104085739_added_entity_LivePoint.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190104143311_added_entity_PointMask.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="config/liquibase/changelog/20181228064602_added_entity_constraints_Question.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->

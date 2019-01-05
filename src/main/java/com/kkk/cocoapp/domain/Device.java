@@ -1,5 +1,6 @@
 package com.kkk.cocoapp.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -7,6 +8,7 @@ import javax.persistence.*;
 
 import java.io.Serializable;
 import java.util.Objects;
+import java.util.Set;
 
 /**
  * A Device.
@@ -43,6 +45,16 @@ public class Device implements Serializable {
 
     @Column(name = "masked")
     private Boolean masked;
+
+    //kkk add mannually
+    @JsonIgnore
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinTable(name = "DeviceCoreSourceMap", joinColumns = @JoinColumn(name = "DeviceId"), inverseJoinColumns = @JoinColumn(name = "CoreSourceId"))
+    private Set<CoreSource> coreSources;
+    public Set<CoreSource> getCoreSources(){
+        return  coreSources;
+    }
+
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {

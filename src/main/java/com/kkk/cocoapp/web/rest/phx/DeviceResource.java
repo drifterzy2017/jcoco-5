@@ -1,4 +1,4 @@
-package com.kkk.cocoapp.web.rest.homepage;
+package com.kkk.cocoapp.web.rest.phx;
 
 
 import com.codahale.metrics.annotation.Timed;

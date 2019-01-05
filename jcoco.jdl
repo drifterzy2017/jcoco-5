@@ -1,3 +1,78 @@
+
+entity PointMask{
+    UserId Integer
+    UserName String
+    Comment String
+    CorePointId Integer
+    DeviceId Integer
+    OperationTime Instant
+}
+
+entity LivePoint{
+CorePointId Integer
+CorePointName String
+CoreSourceId Integer
+CoreSourceName String
+BirthTime Instant
+CollectValue String
+State Integer
+Severity Integer
+}
+
+entity DesiredCov{
+    CorePointId Integer
+    CoreSourceId Integer
+    EngineId Integer
+    DesiredValue String
+    UserId Integer
+    BirthTime Instant
+    State Integer
+    Message String	
+}
+
+entity CorePointMeaning{
+    CoreSourceId Integer
+    CorePointId Integer
+    Value String
+    Meaning String
+}
+
+entity Cov{
+    CorePointId  Integer
+    CoreSourceId   Integer
+    EngineId   Integer
+    Qos    Integer
+    BirthTime  Instant
+    Value  String
+    State Integer
+}
+entity CorePoint
+{
+    CorePointId Integer
+    PointName String
+    Accuracy String
+    Unit String
+    Max String
+    Min String
+    CoreSourceId Integer
+    CoreDataTypeId Integer
+    EventSeverity Integer
+    StateRuleId Integer
+    Readable Boolean
+    Writable Boolean
+    DefaultValue String
+    Step Float
+    Masked Boolean
+
+}
+entity DeviceMask{
+    UserId Integer
+    UserName String
+    Comment String
+    DeviceId Integer
+    OperationTime Instant
+}
+
 entity EventStaticByDay{
 	StaticDay Integer
 	Severity1 Integer

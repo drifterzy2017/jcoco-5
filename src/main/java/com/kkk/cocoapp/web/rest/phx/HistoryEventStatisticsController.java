@@ -1,12 +1,9 @@
-package com.kkk.cocoapp.web.rest.homepage;
+package com.kkk.cocoapp.web.rest.phx;
 
 import com.kkk.cocoapp.domain.EventStaticByDay;
 import com.kkk.cocoapp.service.EventStaticByDayService;
-import com.kkk.cocoapp.service.OverviewService;
 import com.kkk.cocoapp.service.dto.OperationResponse;
 import com.kkk.cocoapp.service.dto.overview.EventStatisticsByDurationResponse;
-import com.kkk.cocoapp.service.dto.overview.ParkAlarmOverView;
-import com.kkk.cocoapp.service.phx.ActiveEventStatisticsManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Optional;
 

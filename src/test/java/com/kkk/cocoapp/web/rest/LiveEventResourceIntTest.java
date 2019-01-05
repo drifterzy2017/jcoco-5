@@ -7,8 +7,8 @@ import com.kkk.cocoapp.repository.LiveEventRepository;
 import com.kkk.cocoapp.service.LiveEventService;
 import com.kkk.cocoapp.web.rest.errors.ExceptionTranslator;
 
-//import com.kkk.cocoapp.web.rest.homepage.LiveEventResource;
-import com.kkk.cocoapp.web.rest.homepage.LiveEventResource;
+//import com.kkk.cocoapp.web.rest.phx.LiveEventResource;
+import com.kkk.cocoapp.web.rest.phx.LiveEventResource;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

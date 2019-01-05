@@ -8,7 +8,7 @@ import com.kkk.cocoapp.service.DeviceService;
 import com.kkk.cocoapp.web.rest.errors.ExceptionTranslator;
 
 
-import com.kkk.cocoapp.web.rest.homepage.DeviceResource;
+import com.kkk.cocoapp.web.rest.phx.DeviceResource;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

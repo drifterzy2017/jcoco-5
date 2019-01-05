@@ -7,8 +7,8 @@ import com.kkk.cocoapp.repository.CoreEventSeverityRepository;
 import com.kkk.cocoapp.service.CoreEventSeverityService;
 import com.kkk.cocoapp.web.rest.errors.ExceptionTranslator;
 
-//import com.kkk.cocoapp.web.rest.homepage.CoreEventSeverityResource;
-import com.kkk.cocoapp.web.rest.homepage.CoreEventSeverityResource;
+//import com.kkk.cocoapp.web.rest.phx.CoreEventSeverityResource;
+import com.kkk.cocoapp.web.rest.phx.CoreEventSeverityResource;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

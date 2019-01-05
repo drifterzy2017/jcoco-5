@@ -1,4 +1,4 @@
-package com.kkk.cocoapp.web.rest.homepage;
+package com.kkk.cocoapp.web.rest.phx;
 
 import com.codahale.metrics.annotation.Timed;
 import com.kkk.cocoapp.domain.LiveEvent;
@@ -8,7 +8,6 @@ import com.kkk.cocoapp.web.rest.util.HeaderUtil;
 import io.github.jhipster.web.util.ResponseUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

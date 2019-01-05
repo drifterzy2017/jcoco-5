@@ -1,4 +1,4 @@
-package com.kkk.cocoapp.web.rest.homepage;
+package com.kkk.cocoapp.web.rest.phx;
 
 import com.kkk.cocoapp.service.phx.ActiveEventStatisticsManager;
 import com.kkk.cocoapp.service.dto.EventStatisticsBySeverityResponse;

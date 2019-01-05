@@ -111,14 +111,3 @@ jhipster:
 # ===================================================================
 
 # application:
-
-# application:
-# application:
-application:
-    isAutoSubmit: 1
-    qLibNames: "SimplePlus-2-12"
-    myRound: 2
-
-#    isAutoSubmit: 1
-#    qLibNames: "mix"
-#    myRound: 8

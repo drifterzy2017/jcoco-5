@@ -93,6 +93,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
             .antMatchers("/api/floors/**")
             .antMatchers("/api/rooms/**")
             .antMatchers("/api/devicepostions/**")
+            .antMatchers("/api/devicemasks/**")
+            .antMatchers("/api/deviceshadows/**")
+            .antMatchers("/api/pointmasks/**")
         ;
     }
 

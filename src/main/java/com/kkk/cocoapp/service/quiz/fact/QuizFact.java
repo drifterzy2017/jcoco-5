@@ -44,7 +44,7 @@ public abstract class QuizFact {
 
     }
     public Quiz FactoryMethod_CreateTest() {
-        this.LibName = AppParameter.getQLibNames();
+        this.LibName = AppParameter.getqLibNames();
 
         val newTest = new Quiz();
         newTest.setLibName(this.LibName);
@@ -156,7 +156,7 @@ public abstract class QuizFact {
         Date now = new Date( );
         SimpleDateFormat ft = new SimpleDateFormat("yyyyMMddHHmmss_");
 
-        String qLibNames = AppParameter.getQLibNames();
+        String qLibNames = AppParameter.getqLibNames();
         String TestName = ft.format(now )+ qLibNames;
         return  TestName;
     }

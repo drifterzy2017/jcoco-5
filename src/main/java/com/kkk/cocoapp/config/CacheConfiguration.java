@@ -58,6 +58,13 @@ public class CacheConfiguration {
             cm.createCache(com.kkk.cocoapp.domain.Building.class.getName(), jcacheConfiguration);
             cm.createCache(com.kkk.cocoapp.domain.CoreSource.class.getName(), jcacheConfiguration);
             cm.createCache(com.kkk.cocoapp.domain.EventStaticByDay.class.getName(), jcacheConfiguration);
+            cm.createCache(com.kkk.cocoapp.domain.DeviceMask.class.getName(), jcacheConfiguration);
+            cm.createCache(com.kkk.cocoapp.domain.CorePoint.class.getName(), jcacheConfiguration);
+            cm.createCache(com.kkk.cocoapp.domain.Cov.class.getName(), jcacheConfiguration);
+            cm.createCache(com.kkk.cocoapp.domain.CorePointMeaning.class.getName(), jcacheConfiguration);
+            cm.createCache(com.kkk.cocoapp.domain.DesiredCov.class.getName(), jcacheConfiguration);
+            cm.createCache(com.kkk.cocoapp.domain.LivePoint.class.getName(), jcacheConfiguration);
+            cm.createCache(com.kkk.cocoapp.domain.PointMask.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }
